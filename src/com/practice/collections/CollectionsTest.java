@@ -17,8 +17,8 @@ public class CollectionsTest {
 
 		// coreCollectionsTest();
 		// customCollectionTest();
-		// setTest();
-		mapTest();
+		 setTest();
+		//mapTest();
 		System.out.println("Main method executed.....");
 	}
 
@@ -78,14 +78,16 @@ public class CollectionsTest {
 		}
 
 		System.out.println("---------------------------------------");
-		Vector<String> vList = new Vector<String>();
+		Vector<String> vList = new Vector<String>();//This is synchronized - i.e thread safe
 		vList.addAll(aList);
 
 		for (String vlValue : vList) {
 			System.out.println("vlValue === " + vlValue);
 		}
 	}
-
+	/**
+	 * 
+	 */
 	private static void setTest() {
 
 		Set<Integer> set = new HashSet<Integer>();
@@ -103,8 +105,11 @@ public class CollectionsTest {
 		set.add(99);
 		set.add(99);
 
+		
 		// int Integer
 		System.out.println(set.add(Integer.valueOf("6")));
+		
+		System.out.println("set.contains(99) == "+set.contains(99));
 		System.out.println("set.size() == " + set.size());
 
 		System.out.println("set == " + set);
@@ -113,13 +118,15 @@ public class CollectionsTest {
 		 */
 
 	}
-
+	/**
+	 * 
+	 */
 	private static void mapTest() {
 		Map<Integer, String> map = new HashMap<>();
 
 		map.put(1, "one");
-		map.put(2, "two");
-		map.put(2, "three");
+		map.put(1234567890, "two");
+		map.put(3, "three");
 
 		System.out.println(map);
 

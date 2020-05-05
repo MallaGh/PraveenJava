@@ -74,7 +74,7 @@ public class JavaApplication extends SuperClass implements InterfceTest {
 	 * @param val2
 	 * @return
 	 */
-	public int method1(int val, int val2) {
+	public synchronized int method1(int val, int val2) {
 		System.out.println("Java overloaded method1......Subclass......::"	+ (val + val2));
 		return (val + val2);
 	}
