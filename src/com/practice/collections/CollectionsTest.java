@@ -15,10 +15,10 @@ public class CollectionsTest {
 
 	public static void main(String[] args) {
 
-		// coreCollectionsTest();
+		coreCollectionsTest();
 		// customCollectionTest();
-		 setTest();
-		//mapTest();
+		// setTest();
+		// mapTest();
 		System.out.println("Main method executed.....");
 	}
 
@@ -72,19 +72,22 @@ public class CollectionsTest {
 		 * System.out.println("aList.get(i)  "+aList.get(i));
 		 * System.out.println("-----------------------------------"); }
 		 */
+		
+		String[] str =  (String[]) aList.toArray();
 
 		for (String string : aList) {
 			System.out.println("string = " + string);
 		}
 
 		System.out.println("---------------------------------------");
-		Vector<String> vList = new Vector<String>();//This is synchronized - i.e thread safe
+		Vector<String> vList = new Vector<String>();// This is synchronized - i.e thread safe
 		vList.addAll(aList);
 
 		for (String vlValue : vList) {
 			System.out.println("vlValue === " + vlValue);
 		}
 	}
+
 	/**
 	 * 
 	 */
@@ -105,11 +108,10 @@ public class CollectionsTest {
 		set.add(99);
 		set.add(99);
 
-		
 		// int Integer
 		System.out.println(set.add(Integer.valueOf("6")));
-		
-		System.out.println("set.contains(99) == "+set.contains(99));
+
+		System.out.println("set.contains(99) == " + set.contains(99));
 		System.out.println("set.size() == " + set.size());
 
 		System.out.println("set == " + set);
@@ -118,6 +120,7 @@ public class CollectionsTest {
 		 */
 
 	}
+
 	/**
 	 * 
 	 */
