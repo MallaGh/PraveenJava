@@ -1,7 +1,8 @@
 package com.practice.collections;
 
 public class ArrayTest {
-
+	//Git edit demo
+	//public static void main(String[] args) {
 	public static void main(String[] args) {
 		
 		String[] strArray = new String[6];
